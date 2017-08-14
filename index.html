@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <title>Quizz App</title>
+  </head>
+  <body>
+    	<div class="container">
+    		<h1>Drivers License Practice Quizz</h1>
+    		<div class="introduction" id="introduction">
+    			<p>This is a basic drivers license practice quiz. You will be asked 5 questions on the topic of DMV. Once you've made your selection, press "Submit" to confirm your selection. To start over, press the "Start Over" button.</p>
+    			<p>To start, click the "Start" button.</p>
+    			<button type="start" id="startbutton">Start</button>
+    		</div>
+    		<form id='question1' class="questionbox hidden">
+    			<h3>Question 1 of 5</h3>
+    			<p>Oregon law requires _________ to use safety belts when a vehicle is in motion.</p>
+    			<span><input class='q1incorrect' type="radio" name="q1" value="incorrect" required><label>A. All passengers</label></span>
+    			<span><input id='q1correct' type="radio" name="q1" value="correct" required><label>B. The driver and all passengers</label></span>
+    			<span><input class='q1incorrect' type="radio" name="q1" value="incorrect" required><label>C. Only front seat passengers</label></span>
+    			<span><input class='q1incorrect' type="radio" name="q1" value="incorrect" required><label>D. The driver and front seat passengers</label></span>
+    			<button id="cont1" type="submit" class="hidden">Continue</button><button id="q1submit" type="submit">Submit</button>
+    			<button class="startover" type="startover">Start Over</button>
+    		</form>
+
+    		<form id='question2' class="questionbox hidden">
+    			<h3>Question 2 of 5</h3>
+    			<p>If your vehicle is moving in traffic, you must use your turn signal</p>
+    			<span><input class='q2incorrect' type="radio" name="q2" value="incorrect" required><label>A. At least 75 feet before the turn or lane change</label></span>
+    			<span><input class='q2incorrect' type="radio" name="q2" value="incorrect" required><label>B. At least 25 feet before the turn or lane change</label></span>
+    			<span><input class='q2incorrect' type="radio" name="q2" value="incorrect" required><label>C. At least 50 feet before the turn or lane change</label></span>
+    			<span><input id='q2correct' type="radio" name="q2" value="correct" required><label>D. At least 100 feet before the turn or lane change</label></span>
+    			<button id="cont2" type="submit" class="hidden">Continue</button><button id="q2submit" type="submit">Submit</button>
+    			<button class="startover" type="startover">Start Over</button>
+    		</form>
+
+    		<form id='question3' class="questionbox hidden">
+    			<h3>Question 3 of 5</h3>
+    			<p>When backing up your vehicle, you must</p>
+    			<span><input class='q3incorrect' type="radio" name="q3" value="incorrect" required><label>A. Not depend on your mirrors, and instead, honk your horn to alert pedestrians behind your vehicle.</label></span>
+    			<span><input class='q3incorrect' type="radio" name="q3" value="incorrect" required><label>B. Not depend on your mirrors, and instead, turn your head to look through the rear window.</label></span>
+    			<span><input id='q3correct' type="radio" name="q3" value="correct" required><label>C. Depent on your feeling.</label></span>
+    			<span><input class='q3incorrect' type="radio" name="q3" value="incorrect" required><label>D. Depend on your rearview mirror.</label></span>
+    			<button id="cont3" type="submit" class="hidden">Continue</button><button id="q3submit" type="submit">Submit</button>
+    			<button class="startover" type="startover">Start Over</button>
+    		</form>
+
+    		<form id='question4' class="questionbox hidden">
+    			<h3>Question 4 of 5</h3>
+    			<p>To prevent accidents, expert drivers try to scan the entire driving scene at least</p>
+    			<span><input id='q4correct' type="radio" name="q4" value="correct" required><label>A. 12 second ahead</label></span>
+    			<span><input class='q4incorrect' type="radio" name="q4" value="incorrect" required><label>B. 30 second ahead</label></span>
+    			<span><input class='q4incorrect' type="radio" name="q4" value="incorrect" required><label>C. 20 second ahead</label></span>
+    			<span><input class='q4incorrect' type="radio" name="q4" value="incorrect" required><label>D. 15 second ahead</label></span>
+    			<button id="cont4" type="submit" class="hidden">Continue</button><button id="q4submit" type="submit">Submit</button>
+    			<button class="startover" type="startover">Start Over</button>
+    		</form>
+
+    		<form id='question5' class="questionbox hidden">
+    			<h3>Question 5 of 5</h3>
+    			<p>If you are changing lanes, preparing to pass another vehicle, or entering traffic, signal and check for passing traffic by first using your mirrors and then</p>
+    			<span><input class='q5incorrect' type="radio" name="q5" value="incorrect" required><label>A. By checking the oncoming traffic.</label></span>
+    			<span><input class='q5incorrect' type="radio" name="q5" value="incorrect" required><label>B. By checking the back of your vehicle.</label></span>
+    			<span><input class='q5incorrect' type="radio" name="q5" value="incorrect" required><label>C. By checking the front of your vehicle.</label></span>
+    			<span><input id='q5correct' type="radio" name="q5" value="correct" required><label>D. By checking your vehicle's blind spot.</label></span>
+    			<button id="cont5" type="submit" class="hidden">Continue</button><button id="q5submit" type="submit">Submit</button>
+    			<button class="startover" type="startover">Start Over</button>
+    		</form>
+
+
+    		<h2 id="correctindicator" class='hidden'>Correct!</h2> <h2 id="incorrectindicator" class="hidden">Incorrect!</h2>
+    <br>
+    		<div id='correctcounter' class="correctcounter hidden">
+    			<span>Answered: <span id="numbercorrect"></span> Correctly Number: <span id="questionnumber"></span>.</span>
+    		</div>
+
+    		<p id="finalp" class="hidden">Congratulations! You answered <span id='finalcount'></span> out of 5 questions correctly!</p>
+    		<button id="laststartover" class="startover hidden" type="startover">Start Over</button>
+
+    </div>
+  </body>
+</html>
