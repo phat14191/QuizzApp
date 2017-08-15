@@ -1,5 +1,5 @@
 * {
-	font-family: "Roboto";
+	font-family: 'Sofia';font-size: 22px;
 }
 
 .container {
@@ -7,8 +7,6 @@
 	margin-left: 20%;
 	margin-right: 20%;
 }
-
-
 
 .greenarrow {
 	width: 0;
@@ -20,4 +18,9 @@
 
 form > span {
 	display: block;
+}
+
+body .container h3 {
+	Font-Family: 'Playfair Display', Serif;
+	Font-Size: 33px;
 }
