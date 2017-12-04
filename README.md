@@ -9,7 +9,7 @@ The site also demonstrates the use of JavaSript, HTML, CSS, jQuery, responsive d
 
 ## Demo
 
-For the live version of this portfolio, check out <https://github.com/phat14191/QuizzApp.git/>
+For the live version of this portfolio, check out <https://phat14191.github.io/QuizzApp/>
 
 ## Take a look my code
 
