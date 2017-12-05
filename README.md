@@ -13,7 +13,6 @@ For the live version of this portfolio, check out <https://phat14191.github.io/Q
 
 ## Setup instructions
 
-[Take a look my code](https://github.com/phat14191/QuizzApp.git).
 1) git clone https://github.com/phat14191/QuizzApp.git
 2) cd QuizzApp
 3) click index.html
